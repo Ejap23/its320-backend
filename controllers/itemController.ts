@@ -2,15 +2,16 @@ import express from 'express'
 import { Request, Response } from 'express';
 const { PrismaClient }= require ("@prisma/client");
 
+import bodyParser from 'body-parser';
+import cors from 'cors'
 
-const bodyparser = require ("body-parser")
-const cors = require ("cors")
+
 const app = express();
 const prisma = new PrismaClient();
 
 app.use(express());
 app.use(cors());
-app.use(bodyparser.json());
+app.use(bodyParser.json());
 
 // @desc Get items
 // @route GET /api/items
