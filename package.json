@@ -2,6 +2,7 @@
   "name": "its320-backend",
   "version": "1.0.0",
   "main": "index.ts",
+  "type": "module", 
   "scripts": {
     "build": "tsc index.ts",
     "dev": "nodemon index.ts",
